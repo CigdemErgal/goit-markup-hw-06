@@ -826,3 +826,33 @@ textarea.form-input {
   height:auto;
   display:block
 }
+/* Base: mobil 1x */
+.hero{
+  background-image: url("images/hero-mob.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobil retina 2x */
+@media (min-resolution: 2dppx){
+  .hero{ background-image: url("images/hero-mob@2x.jpg"); }
+}
+
+/* Tablet ≥768 */
+@media (min-width: 768px){
+  .hero{ background-image: url("images/hero-tab.jpg"); }
+}
+/* Tablet retina */
+@media (min-width: 768px) and (min-resolution: 2dppx){
+  .hero{ background-image: url("images/hero-tab@2x.jpg"); }
+}
+
+/* Desktop ≥1158 */
+@media (min-width: 1158px){
+  .hero{ background-image: url("images/hero-desk.jpg"); }
+}
+/* Desktop retina */
+@media (min-width: 1158px) and (min-resolution: 2dppx){
+  .hero{ background-image: url("images/hero-desk@2x.jpg"); }
+}
