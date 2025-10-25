@@ -50,6 +50,7 @@ button {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 24px;
+  display: none;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -93,6 +94,27 @@ header .container {
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
+}
+.nav {
+  display: none;
+}
+.nav .is-open {
+  display: block;
+}
+.mobil-menu {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  line-height: 0;
+  cursor: pointer;
+  appearance: none;
+}
+.mobil-menu .icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: #2e2f42;
 }
 .site-contacts {
   font-style: normal;
@@ -324,7 +346,7 @@ header .container {
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  gap: 48px ;
+  gap: 48px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -393,6 +415,10 @@ header .container {
 .site-footer {
   background-color: #2e2f42;
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
 }
 .site-footer .container {
   display: flex;
@@ -420,6 +446,8 @@ header .container {
 }
 .footer-logo .logo-accent {
   color: #4d5ae5;
+  text-align: center;
+  align-items: center;
 }
 .footer-social-title {
   color: #fff;
@@ -428,13 +456,15 @@ header .container {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
+  align-items: center;
 }
 .footer-social .socials {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 16px;
   list-style: none;
-  margin: 0;
+  margin: 16px 0 0;
   padding: 0;
 }
 .footer-social .social-link:is(:hover, :focus) {
@@ -801,11 +831,11 @@ textarea.form-input {
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe-btn {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   height: 40px;
   padding: 8px 24px;
   border: none;
@@ -822,7 +852,10 @@ textarea.form-input {
   background-color: #404bbf;
 }
 .subscribe-icon {
-  fill: #fff;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  
 }
 .project-img {
   width: 100%;
@@ -830,18 +863,18 @@ textarea.form-input {
   display: block;
 }
 /*tablet stil 768px*/
-@media (min-width:768px){
-  .container{
+@media (min-width: 768px) {
+  .container {
     max-width: 768px;
   }
-  header .container{
+  header .container {
     padding: 24px 15px;
   }
-  .nav-list{
+  .nav-list {
     display: flex;
     gap: 40px;
   }
-  .nav-link{
+  .nav-link {
     color: #2e2f42;
     font-weight: 500;
     font-size: 16px;
@@ -854,7 +887,7 @@ textarea.form-input {
   .nav-link:focus {
     color: #404bbf;
   }
-   .site-nav .nav-link::after {
+  .site-nav .nav-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -889,7 +922,7 @@ textarea.form-input {
     color: #434455;
     text-decoration: none;
   }
-.contacts-link:hover,
+  .contacts-link:hover,
   .contacts-link:focus {
     color: #404bbf;
   }
@@ -913,12 +946,12 @@ textarea.form-input {
         url("../images/people-office-tablet@2x.jpg");
     }
   }
-.hero-title {
+  .hero-title {
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 36px;
   }
-.features-list {
+  .features-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
@@ -930,7 +963,7 @@ textarea.form-input {
   .features-title {
     text-align: left;
   }
-.team-list {
+  .team-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
@@ -941,7 +974,7 @@ textarea.form-input {
     flex-basis: calc((100% - 24px) / 2);
     max-width: 264px;
   }
-   .portfolio-list {
+  .portfolio-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
@@ -950,7 +983,7 @@ textarea.form-input {
   .portfolio-list > li {
     flex-basis: calc((100% - 24px) / 2);
   }
-.site-footer .container {
+  .site-footer .container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
@@ -982,13 +1015,13 @@ textarea.form-input {
     width: 408px;
     height: 584px;
   }
-.form-input {
+  .form-input {
     width: 360px;
   }
 }
 /*masaüstü görünüm 1158px*/
-@media (min-width:1158px){
-  .container{
+@media (min-width: 1158px) {
+  .container {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1013,19 +1046,19 @@ textarea.form-input {
         url("../images/people-office-1@2x.jpg");
     }
   }
-  .hero-title{
+  .hero-title {
     margin-bottom: 48px;
   }
-  .section{
+  .section {
     padding: 120px 0;
   }
-  .features-list{
+  .features-list {
     gap: 24px;
   }
-   .features-list > li {
+  .features-list > li {
     flex-basis: calc((100% - 72px) / 4);
   }
-.feature-icon {
+  .feature-icon {
     width: 264px;
     height: 112px;
     display: flex;
@@ -1053,16 +1086,16 @@ textarea.form-input {
   .team-list > li {
     flex-basis: calc((100% - 72px) / 4);
   }
-  .portfolio-list{
+  .portfolio-list {
     gap: 48px 24px;
   }
-  .portfolio-list >li {
-    flex-basis: calc((100%-48px)/3);
+  .portfolio-list > li {
+    flex-basis: calc((100%-48px) / 3);
   }
   .site-footer {
     padding: 100px 0;
   }
-.site-footer .container {
+  .site-footer .container {
     gap: 0;
     padding-left: 15px;
   }
