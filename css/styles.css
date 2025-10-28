@@ -1072,7 +1072,7 @@ textarea.form-input {
   .footer-social {
     
     text-align: left;
-    align-items;
+    align-items:center
   }
 
   .subscribe-form {
@@ -1093,7 +1093,7 @@ textarea.form-input {
   .form-input {
     width: 360px;
   }
-}
+
 /*masaüstü görünüm 1158px*/
 @media (min-width: 1158px) {
   .container {
